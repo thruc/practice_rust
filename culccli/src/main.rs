@@ -46,6 +46,23 @@ impl RpnCaluculator {
     }
 }
 
+#[derive(Clap, Debug)]
+#[clap(
+    name = "My RPN program",
+    version = "1.0.0",
+    author = "holy",
+    about = "calculator"
+)]
+struct Opts {
+    /// Set the level of verbosity
+    #[clap(short, long)]
+    verbose: bool,
+
+    /// Formulas written in RPN
+    #[clap(name = "FILE")]
+    formula_file: Option<String>,
+}
+
 fn main() {
     let opts = Opts::parse();
     if let Some(path) = opts.formula_file {
@@ -70,22 +87,7 @@ fn run<R: BufRead>(reader: R, verbose: bool) {
     }
 }
 
-#[derive(Clap, Debug)]
-#[clap(
-    name = "My RPN program",
-    version = "1.0.0",
-    author = "holy",
-    about = "calculator"
-)]
-struct Opts {
-    /// Set the level of verbosity
-    #[clap(short, long)]
-    verbose: bool,
 
-    /// Formulas written in RPN
-    #[clap(name = "FILE")]
-    formula_file: Option<String>,
-}
 
 // test
 #[cfg(test)]
