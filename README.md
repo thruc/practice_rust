@@ -1,1 +1,1 @@
-"# rust-prac" 
+# practice_rust
