@@ -9,7 +9,7 @@ edition = "2018"
 [dependencies]
 actix-web = "2.0.0"
 actix-rt = "1.1.1"
-thiserror = "1.0.20"
+thiserror = "1.0.57"
 askama = "0.12.1"
 rusqlite = { version = "0.23", features=["bundled"] }
 r2d2 = "0.8.9"
