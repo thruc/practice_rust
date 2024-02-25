@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 clap = "3.2.25"
-anyhow = "1.0.79"
+anyhow = "1.0.80"
